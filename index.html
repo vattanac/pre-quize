@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Employee Form</label><br>
+
+    <label for="">ID</label>
+    <input id="id" type="text"><br>
+
+    <label for="">Name</label>
+    <input id="name" type="text"><br>
+
+    <label for="">Gender</label>
+    <label for="">Male</label>
+    <input id="male" type="radio">
+    <label for="">Female</label>
+    <input id="female" type="radio"><br>
+
+    <label for="">Hour</label>
+    <input id="hour" type="text"><br>
+
+    <label for="">Rate</label>
+    <input id="rate" type="text"><br>
+
+
+    <input type="button" onclick="clickme()" value="Add"><br>
+
+
+    <table id="list" border="border-collape">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Hour</th>
+            <th>Rate</th>
+
+        </tr>
+
+        <tbody id="data">
+
+        </tbody>
+
+    </table>
+
+    <script>
+        function clickme() {
+            var row = ""
+            var gender 
+            var id = document.getElementById("id").value
+            var name = document.getElementById("name").value
+            var hour = document.getElementById("hour").value
+            var rate = document.getElementById("rate").value
+            var rows = document.getElementById("data")
+            var male =document.getElementById("male")
+            var female = document.getElementById("female")
+
+
+            if(male.checked){
+                gender = "male"
+            }
+            else {
+                gender = "female"
+            }
+            alert(gender)
+
+            row += "<tr>" +
+                "<td>" + id + "</td>" +
+                "<td>" + name + "</td>" +
+                "<td>" + gender+"</td>"+
+                "<td>" + hour + "</td>" +
+                "<td>" + rate + "</td>"
+            "</tr>"
+            rows.innerHTML = row
+        }
+    </script>
+</body>
+
+</html>

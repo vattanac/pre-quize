@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+        <img id="img" onclick="myclick()" style="border-radius:50%;width:200px;height:200px" src="./images/a.jpg" alt="">
+
+    </div>
+    <script>
+        var arr = ["./images/a.jpg", "./images/a1.jpg", "./images/a2.JPG", "./images/b.jpg"]
+        var i=0     
+        function myclick() {
+          
+            if(i<4){
+                i++
+                console.log(i);
+                if(i==4)i=0
+                document.getElementById("img").src = arr[i]
+     
+            }           
+        }
+    </script>
+</body>
+
+</html>
